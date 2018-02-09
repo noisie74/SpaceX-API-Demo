@@ -7,6 +7,9 @@ import android.support.v7.app.AppCompatActivity;
 
 import michael.com.spacex.ui.FragmentLaunches;
 
+/**
+ * Entry point of the Application
+ */
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -14,10 +17,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // create a new instance of FragmentLaunches if savedInstanceState is null
         if (savedInstanceState == null)
             initFragment(FragmentLaunches.newInstance());
     }
 
+
+    /**
+     * Adding Fragment to the Activity
+     * @param fragment
+     */
     private void initFragment(Fragment fragment) {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.add(R.id.container, fragment);

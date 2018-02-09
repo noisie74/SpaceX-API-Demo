@@ -7,7 +7,6 @@ import michael.com.spacex.model.Launch;
 /**
  * Contract between View and Presenter
  */
-
 public interface Contract {
 
     interface View {

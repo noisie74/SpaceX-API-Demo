@@ -21,9 +21,8 @@ import michael.com.spacex.R;
 import michael.com.spacex.model.Launch;
 
 /**
- * Created by Mikhail on 2/7/18.
+ * Fragment that displays launches
  */
-
 public class FragmentLaunches extends Fragment implements Contract.View {
 
     private ProgressBar mProgress;
@@ -128,10 +127,13 @@ public class FragmentLaunches extends Fragment implements Contract.View {
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
     }
 
+
     private void setToolBar() {
         mToolbar.inflateMenu(R.menu.menu_main);
         setHasOptionsMenu(true);
         mToolbar.setTitle(R.string.app_name);
+
+        //Filter rocket launches by year
         mToolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {

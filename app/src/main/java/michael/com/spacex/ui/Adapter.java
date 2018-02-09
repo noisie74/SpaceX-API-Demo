@@ -14,9 +14,8 @@ import michael.com.spacex.model.Launch;
 
 
 /**
- * Created by Mikhail on 2/7/18.
+ * Adapter object that holds data before displaying to a user
  */
-
 public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
     private List<Launch> upcomingLaunches;
@@ -80,6 +79,9 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         return upcomingLaunches.size();
     }
 
+    /**
+     * Class that holds references to the UI components
+     */
     static class ViewHolder extends RecyclerView.ViewHolder {
 
         private TextView flightNumberTV, launchYearTV, launchDateTV, rocketNameTV, launchSiteTV;

@@ -3,7 +3,7 @@ package michael.com.spacex.model;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Created by Mikhail on 2/7/18.
+ * LaunchSite object
  */
 
 public class LaunchSite {

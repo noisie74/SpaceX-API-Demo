@@ -1,9 +1,8 @@
 package michael.com.spacex.util;
 
 /**
- * Created by Mikhail on 2/7/18.
+ * utility class that holds SpaceX API URLs
  */
-
 public class Constants {
 
     public static final String URL_UPCOMING = "https://api.spacexdata.com/v2/launches/";

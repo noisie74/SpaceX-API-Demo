@@ -13,9 +13,8 @@ import rx.schedulers.Schedulers;
 import rx.subscriptions.CompositeSubscription;
 
 /**
- * Created by Mikhail on 2/7/18.
+ * Class responsible for querying the model and updating the view, reacting to user interactions
  */
-
 public class Presenter implements Contract.Presenter {
 
     private CompositeSubscription mSubscription;
@@ -70,7 +69,6 @@ public class Presenter implements Contract.Presenter {
 
     @Override
     public void filterLaunches(String launchYear) {
-        Log.d("Presenter", launchYear);
         mView.showProgressBar();
         mSubscription.add(ApiService.networkCall(Constants.URL_ALL).getLaunches(launchYear)
                 .subscribeOn(Schedulers.io())
@@ -111,6 +109,6 @@ public class Presenter implements Contract.Presenter {
 
     @Override
     public void unSubscribe() {
-        mSubscription.clear();
+        mSubscription.clear(); //clear Subscription object
     }
 }

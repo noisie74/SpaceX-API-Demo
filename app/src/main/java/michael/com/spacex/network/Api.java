@@ -8,9 +8,8 @@ import retrofit2.http.Query;
 import rx.Observable;
 
 /**
- * Created by Mikhail on 2/7/18.
+ * API endpoints
  */
-
 public interface Api {
 
     @GET("upcoming")
